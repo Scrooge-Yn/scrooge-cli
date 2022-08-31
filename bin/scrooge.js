@@ -1,6 +1,7 @@
 #! /usr/bin/env node
 const chalk = require('chalk');
 const program = require('commander');
+const figlet = require('figlet');
 
 program
 	.command('create <project-name>') // 新增创建项目指令
@@ -22,6 +23,17 @@ program
 	});
 
 program.on('--help', function () {
+	// 自定义动画
+	console.log(
+		'\r\n' +
+			figlet.textSync('scr-cli', {
+				font: '3D-ASCII',
+				horizontalLayout: 'default',
+				verticalLayout: 'default',
+				width: 200,
+				whitespaceBreak: true,
+			})
+	);
 	// 前后增加一行模拟空格, 方便阅读
 	console.log();
 	console.log(
