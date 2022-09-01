@@ -1,8 +1,8 @@
 {
 	"name": "scrooge-cli",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"description": "脚手架",
-	"main": "index.js",
+	"main": "./bin/scrooge.js",
 	"scripts": {
 		"dev": "echo \"Error: no dev specified\" && exit 1"
 	},
@@ -18,7 +18,7 @@
 	"license": "ISC",
 	"dependencies": {
 		"axios": "^0.27.2",
-		"chalk": "^5.0.1",
+		"chalk": "4.0.0",
 		"commander": "9.0.0",
 		"download-git-repo": "^3.0.2",
 		"figlet": "^1.5.2",
@@ -26,7 +26,6 @@
 		"inquirer": "8.2.1",
 		"ora": "5.0.0"
 	},
-	"devDependencies": {},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/Scrooger-star/scrooge-cli.git"
