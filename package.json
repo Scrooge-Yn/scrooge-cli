@@ -1,6 +1,6 @@
 {
 	"name": "scrooge-cli",
-	"version": "1.0.6",
+	"version": "1.0.7",
 	"description": "脚手架",
 	"main": "./bin/scrooge.js",
 	"scripts": {
