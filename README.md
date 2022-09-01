@@ -1,7 +1,7 @@
 # scrooge-cli 脚手架
 
 - version 1.0.6
-- 使用 `create` 创建包含 Vue2、Vue3 的集成脚手架
+- 使用 `create` 创建 ***自定义模板*** Vue2、Vue3 的集成脚手架
 - 使用 `scrooge-cli` 快速体验
 - 目前 React 集成支持中
 
