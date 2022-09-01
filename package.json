@@ -1,14 +1,14 @@
 {
 	"name": "scrooge-cli",
-	"version": "1.0.3",
+	"version": "1.0.5",
 	"description": "脚手架",
 	"main": "index.js",
 	"scripts": {
 		"dev": "echo \"Error: no dev specified\" && exit 1"
 	},
 	"bin": {
-		"scrooge": "./bin/scrooge.js",
-		"scrooge-cli": "./bin/scrooge.js"
+		"scrooge": "bin/scrooge.js",
+		"scrooge-cli": "bin/scrooge.js"
 	},
 	"keywords": [
 		"cli",
@@ -25,5 +25,14 @@
 		"fs-extra": "^10.1.0",
 		"inquirer": "8.2.1",
 		"ora": "5.0.0"
-	}
+	},
+	"devDependencies": {},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Scrooger-star/scrooge-cli.git"
+	},
+	"bugs": {
+		"url": "https://github.com/Scrooger-star/scrooge-cli/issues"
+	},
+	"homepage": "https://github.com/Scrooger-star/scrooge-cli#readme"
 }
