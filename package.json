@@ -1,26 +1,26 @@
 {
-  "name": "scrooge-cli",
-  "version": "1.1.0",
-  "description": "脚手架",
-  "main": "index.js",
-  "scripts": {
-    "dev": "echo \"Error: no dev specified\" && exit 1"
-  },
-  "bin": {
-    "scrooge": "./bin/scrooge.js",
-    "scrooge-cli": "./bin/scrooge.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "axios": "^0.27.2",
-    "chalk": "4.0.0",
-    "commander": "9.0.0",
-    "download-git-repo": "^3.0.2",
-    "figlet": "^1.5.2",
-    "fs-extra": "^10.1.0",
-    "inquirer": "8.2.1",
-    "ora": "5.0.0"
-  }
+	"name": "scrooge-cli",
+	"version": "1.0.2",
+	"description": "脚手架",
+	"main": "index.js",
+	"scripts": {
+		"dev": "echo \"Error: no dev specified\" && exit 1"
+	},
+	"bin": {
+		"scrooge": "./bin/scrooge.js",
+		"scrooge-cli": "./bin/scrooge.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"axios": "^0.27.2",
+		"chalk": "^5.0.1",
+		"commander": "9.0.0",
+		"download-git-repo": "^3.0.2",
+		"figlet": "^1.5.2",
+		"fs-extra": "^10.1.0",
+		"inquirer": "8.2.1",
+		"ora": "5.0.0"
+	}
 }
