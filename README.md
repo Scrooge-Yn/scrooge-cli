@@ -1,5 +1,5 @@
 # scrooge-cli脚手架
-+ version 1.1.0
++ version 1.0.2
 + 使用 ```create``` 创建包含Vue2、Vue3的集成脚手架
 + 使用 ```scrooge-cli``` 快速体验
 + 目前 React 集成支持中
