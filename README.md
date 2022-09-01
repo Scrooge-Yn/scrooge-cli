@@ -28,9 +28,9 @@ npm i scrooge-cli
 ```
 
 # 第三方库
-+ chalk: 命令行美化工具
++ chalk: 命令行美化工具  ***版本必须低于```4.5.0```***
 + ora: 命令行spinner效果
-+ commander: 命令行工具
++ commander: 命令行工具  ***版本必须低于```9.0.0```***
 + figlet: 命令行自定义动画
-+ inquirer: 命令行选择器工具
++ inquirer: 命令行选择器工具  ***版本必须低于```8.3.0```***
 + download-git-repo: 命令行git仓库模板下载工具
