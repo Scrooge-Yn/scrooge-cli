@@ -12,9 +12,10 @@
 	},
 	"keywords": [
 		"cli",
-		"scrooge-cli"
+		"scrooge-cli",
+		"create-project"
 	],
-	"author": "",
+	"author": "SCROOGE",
 	"license": "ISC",
 	"dependencies": {
 		"axios": "^0.27.2",

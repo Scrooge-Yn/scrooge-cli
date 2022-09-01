@@ -9,8 +9,11 @@ axios.interceptors.response.use(res => {
  * 获取模板
  * @returns Promise 仓库信息
  */
-async function getZhuRongRepo() {
-	return axios.get('https://api.github.com/orgs/zhurong-cli/repos');
+async function getRepoInfo() {
+	return axios.get(
+		'https://gitee.com/api/v5/orgs/seehoo-frontend/repos?access_token=5707efe0bf77c2587d2b7c7e73ca2462'
+		// 'https://api.github.com/orgs/zhurong-cli/repos'
+	);
 }
 
 /**
@@ -23,6 +26,6 @@ async function getTagsByRepo(repo) {
 }
 
 module.exports = {
-	getZhuRongRepo,
+	getRepoInfo,
 	getTagsByRepo,
 };

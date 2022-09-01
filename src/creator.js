@@ -3,7 +3,7 @@ const path = require('path');
 const Inquirer = require('inquirer');
 const downloadGitRepo = require('download-git-repo');
 const { loading } = require('./util');
-const { getZhuRongRepo, getTagsByRepo } = require('./api');
+const { getRepoInfo, getTagsByRepo } = require('./api');
 
 class Creator {
 	constructor(name, target) {
@@ -16,14 +16,14 @@ class Creator {
 		// 模板信息
 		let repo = await this.getRepoInfo();
 		// 版本信息
-		let tag = await this.getTagInfo(repo);
+		// let tag = await this.getTagInfo(repo);
 		// 下载模板
-		await this.download(repo, tag);
+		await this.download(repo);
 	}
 	// 获取模板信息, 返回用户选择的模板
 	async getRepoInfo() {
 		// 获取仓库list
-		let repoList = await loading('获取仓库信息中...', getZhuRongRepo);
+		let repoList = await loading('获取仓库信息中...', getRepoInfo);
 		// 获取仓库名
 		const repos = repoList.map(item => {
 			return item.name;
@@ -48,7 +48,7 @@ class Creator {
 		});
 		let { tag } = await new Inquirer.prompt([
 			{
-				name: 'repo',
+				name: 'tag',
 				type: 'list',
 				message: '请选择版本...',
 				choices: tags,
@@ -59,13 +59,14 @@ class Creator {
 	// 下载模板方法
 	async download(repo, tag) {
 		// 初始化下载地址
-		// console.log(this.target);
-		const templateUrl = `zhurong-cli/${repo}${tag ? '#' + tag : ''}`;
+		const templateUrl = `seehoo-frontend/${repo}`;
 		await loading(
 			'下载模板中, 请稍等...',
 			this.downloadGitRepo,
-			templateUrl,
-			path.resolve(process.cwd(), this.target)
+			`direct:https://gitee.com/${templateUrl}.git`,
+			this.name,
+			{ clone: true }
+			// path.resolve(process.cwd(), this.target)
 		);
 	}
 }
