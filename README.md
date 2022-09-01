@@ -5,6 +5,18 @@
 + 目前 React 集成支持中
 
 
+# use
+```
+// 指令查询
+scrooge-cli --help
+
+// 创建指令
+scrooge-cli create <projectName>
+
+--force 强制覆盖重名目录
+--config 配置
+```
+
 # install
 项目使用了yarn和node，当然npm也可以，不过还是推荐yarn
 ```
