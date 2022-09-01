@@ -10,7 +10,10 @@
 		"scrooge": "./bin/scrooge.js",
 		"scrooge-cli": "./bin/scrooge.js"
 	},
-	"keywords": [],
+	"keywords": [
+		"cli",
+		"scrooge-cli"
+	],
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
