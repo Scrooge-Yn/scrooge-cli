@@ -1,4 +1,9 @@
-# scrooge-cli 脚手架
+* [scrooge-cli](#scrooge-cli)
+* [use](#use)
+* [install](#install)
+* [dependencies](#dependencies)
+
+# scrooge-cli
 
 - version 1.0.7
 - 使用 `create` 创建 **_自定义模板_** Vue2、Vue3 的集成脚手架
@@ -30,7 +35,7 @@ yarn add scrooge-cli
 npm i scrooge-cli
 ```
 
-# 第三方库
+# dependencies
 
 - chalk: 命令行美化工具 **_版本必须低于`4.5.0`，推荐`4.0.0`_**
 - ora: 命令行 spinner 效果
