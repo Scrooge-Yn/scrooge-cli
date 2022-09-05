@@ -1,6 +1,6 @@
 const util = require('util');
-const path = require('path');
 const Inquirer = require('inquirer');
+const chalk = require('chalk');
 const downloadGitRepo = require('download-git-repo');
 const { loading } = require('./util');
 const { getRepoInfo, getTagsByRepo } = require('./api');
@@ -19,6 +19,11 @@ class Creator {
 		// let tag = await this.getTagInfo(repo);
 		// 下载模板
 		await this.download(repo);
+
+		console.log();
+		console.log(chalk.bgCyan.bold('Next Step!'));
+		console.log();
+		console.log('完成模板安装, 开始愉快的开发吧~');
 	}
 	// 获取模板信息, 返回用户选择的模板
 	async getRepoInfo() {
@@ -66,7 +71,6 @@ class Creator {
 			`direct:https://gitee.com/${templateUrl}.git`,
 			this.name,
 			{ clone: true }
-			// path.resolve(process.cwd(), this.target)
 		);
 	}
 }

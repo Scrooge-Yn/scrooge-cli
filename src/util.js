@@ -1,3 +1,4 @@
+const chalk = require('chalk');
 const ora = require('ora');
 
 /**
@@ -15,7 +16,7 @@ async function loading(message, fn, ...args) {
 		spinner.succeed();
 		return executeRes;
 	} catch (error) {
-		spinner.fail('获取失败, 重连中...');
+		spinner.fail(chalk.red('获取失败, 重连中...'));
 		await sleep(2000);
 		return loading(message, fn, ...args);
 	}
