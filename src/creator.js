@@ -13,8 +13,16 @@ class Creator {
 		this.downloadGitRepo = util.promisify(downloadGitRepo);
 	}
 	async create() {
+		// gitee授权获取的access_token
+		let { access_token } = await new Inquirer.prompt([
+			{
+				name: 'access_token',
+				type: 'input',
+				message: '请输入授权access_token',
+			},
+		]);
 		// 模板信息
-		let repo = await this.getRepoInfo();
+		let repo = await this.getRepoInfo(access_token);
 		// 版本信息
 		// let tag = await this.getTagInfo(repo);
 		// 下载模板
