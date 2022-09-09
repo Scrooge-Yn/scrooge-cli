@@ -11,7 +11,7 @@ axios.interceptors.response.use(res => {
  */
 async function getRepoInfo(access_token) {
 	return axios.get(
-		`https://gitee.com/api/v5/orgs/seehoo-frontend/repos?access_token=${access_token}`
+		`https://gitee.com/api/v5/orgs/seehoo-frontend/repos?access_token=6c35136f8f41137c0373d016de769036`
 	);
 }
 
