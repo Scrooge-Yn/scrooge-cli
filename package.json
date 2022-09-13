@@ -34,5 +34,8 @@
 	"bugs": {
 		"url": "https://github.com/Scrooger-star/scrooge-cli/issues"
 	},
-	"homepage": "https://github.com/Scrooger-star/scrooge-cli#readme"
+	"homepage": "https://github.com/Scrooger-star/scrooge-cli#readme",
+	"devDependencies": {
+		"qs": "^6.11.0"
+	}
 }

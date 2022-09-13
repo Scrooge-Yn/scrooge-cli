@@ -6,12 +6,24 @@ axios.interceptors.response.use(res => {
 });
 
 /**
+ * 获取用户token
+ * @returns Promise 用户token
+ */
+async function getAuthToken(params) {
+	return axios.post('https://gitee.com/oauth/token', params, {
+		headers: {
+			'Content-Type': 'application/x-www-form-urlencoded',
+		},
+	});
+}
+
+/**
  * 获取模板
  * @returns Promise 仓库信息
  */
 async function getRepoInfo(access_token) {
 	return axios.get(
-		`https://gitee.com/api/v5/orgs/seehoo-frontend/repos?access_token=6c35136f8f41137c0373d016de769036`
+		`https://gitee.com/api/v5/orgs/seehoo-frontend/repos?access_token=acd8e386daefc8b4422053008fb7f871`
 	);
 }
 
@@ -25,6 +37,7 @@ async function getTagsByRepo(repo) {
 }
 
 module.exports = {
+	getAuthToken,
 	getRepoInfo,
 	getTagsByRepo,
 };

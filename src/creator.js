@@ -3,7 +3,7 @@ const Inquirer = require('inquirer');
 const chalk = require('chalk');
 const downloadGitRepo = require('download-git-repo');
 const { loading } = require('./util');
-const { getRepoInfo, getTagsByRepo } = require('./api');
+const { getAuthToken, getRepoInfo, getTagsByRepo } = require('./api');
 
 class Creator {
 	constructor(name, target) {
@@ -13,14 +13,6 @@ class Creator {
 		this.downloadGitRepo = util.promisify(downloadGitRepo);
 	}
 	async create() {
-		// gitee授权获取的access_token
-		// let { access_token } = await new Inquirer.prompt([
-		// 	{
-		// 		name: 'access_token',
-		// 		type: 'input',
-		// 		message: '请输入授权access_token',
-		// 	},
-		// ]);
 		// 模板信息
 		let repo = await this.getRepoInfo();
 		// 版本信息
