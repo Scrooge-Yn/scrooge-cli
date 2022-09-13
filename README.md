@@ -43,3 +43,4 @@ npm i scrooge-cli
 - figlet: 命令行自定义动画
 - inquirer: 命令行选择器工具 **_版本必须低于`8.3.0`，推荐`8.2.1`_**
 - download-git-repo: 命令行 git 仓库模板下载工具
+- qs: axios post请求
